@@ -214,10 +214,9 @@ class User(UserMixin, db.Model):
             db.session.add(f)
 
     def unfollow(self, user):
-        if user.id is None:
-            return False
-        return self.followers.filter_by(
-            follower_id=user.id).first() is not None
+        f = self.followed.filter_by(followed_id=user.id).first()
+        if f:
+            db.session.delete(f)
 
     def is_following(self, user):
         if user.id is None:
@@ -236,7 +235,7 @@ class User(UserMixin, db.Model):
         return Post.query.join(Follow, Follow.followed_id == Post.author_id)\
             .filter(Follow.follower_id == self.id)
 
-    def __repr(self):
+    def __repr__(self):
         return '<User %r>' % self.username
 
 
