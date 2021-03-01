@@ -3,5 +3,7 @@
 {% block title %}CountingBlessings{% endblock %}
 
 {% block page_content %}
-<h1>Hello, world!</h1>
+<div class="page-header">
+    <h1>Hello, {% if current_user.is_authenticated %}{{ current_user.username }}{% else %}Stranger{% endif %}!</h1>
+</div>
 {% endblock %}
