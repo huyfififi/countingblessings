@@ -12,8 +12,7 @@ class NameForm(FlaskForm):
 
 
 class EditProfileForm(FlaskForm):
-    name = StringField('Real name', validators=[Length(0, 64)])
-    location = StringField('Location', validators=[Length(0, 64)])
+    name = StringField('Name', validators=[Length(0, 64)])
     about_me = TextAreaField('About me')
     submit = SubmitField('Submit')
 
@@ -28,8 +27,7 @@ class EditProfileAdminForm(FlaskForm):
                'underscores')])
     confirmed = BooleanField('Confirmed')
     role = SelectField('Role', coerce=int)
-    name = StringField('Real name', validators=[Length(0, 64)])
-    location = StringField('Location', validators=[Length(0, 64)])
+    name = StringField('Name', validators=[Length(0, 64)])
     about_me = TextAreaField('About me')
     submit = SubmitField('Submit')
 

@@ -5,7 +5,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 from flask import current_app
 from flask_login import UserMixin
-from . import db
+from . import db, login_manager
 
 
 class Permission:
@@ -101,7 +101,6 @@ class User(UserMixin, db.Model):
                                 backref=db.backref('followed', lazy='joined'),
                                 lazy='dynamic',
                                 cascade='all, delete-orphan')
-    comments = db.relationship('Comment', backref='author', lazy='dynamic')
 
     @staticmethod
     def add_self_follows():
@@ -114,7 +113,7 @@ class User(UserMixin, db.Model):
     def __init__(self, **kwargs):
         super(User, self).__init__(**kwargs)
         if self.role is None:
-            if self.email == current_app.config['FLASKY_ADMIN']:
+            if self.email == current_app.config['CB_ADMIN']:
                 self.role = Role.query.filter_by(name='Administrator').first()
             if self.role is None:
                 self.role = Role.query.filter_by(default=True).first()
@@ -239,6 +238,11 @@ class User(UserMixin, db.Model):
 
     def __repr(self):
         return '<User %r>' % self.username
+
+
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(int(user_id))
 
 
 class Post(db.Model):
