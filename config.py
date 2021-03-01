@@ -14,6 +14,8 @@ class Config:
     CB_MAIL_SENDER = 'CountingBlessings Admin <countingblessings@example.com>'
     CB_ADMIN = os.environ.get('CB_ADMIN')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    CB_POSTS_PER_PAGE = 20
+    CB_FOLLOWERS_PER_PAGE = 50
 
     @staticmethod
     def init_app(app):
