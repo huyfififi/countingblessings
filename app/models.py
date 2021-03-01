@@ -44,8 +44,8 @@ class Role(db.Model):
             if role is None:
                 role = Role(name=r)
             role.reset_permissions()
-            for permission in roles[r]:
-                role.add_permission(permission)
+            for perm in roles[r]:
+                role.add_permission(perm)
             role.default = (role.name == default_role)
             db.session.add(role)
         db.session.commit()
