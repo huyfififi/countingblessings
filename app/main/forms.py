@@ -12,23 +12,23 @@ class NameForm(FlaskForm):
 
 
 class EditProfileForm(FlaskForm):
-    name = StringField('Name', validators=[Length(0, 64)])
-    about_me = TextAreaField('About me')
+    name = StringField('Name(0~64 chars)', validators=[Length(0, 64)])
+    about_me = TextAreaField('About me(0~1000 chars)', validators=[Length(0, 1000)])
     submit = SubmitField('Submit')
 
 
 class EditProfileAdminForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Length(1, 64),
                                              Email()])
-    username = StringField('Username', validators=[
+    username = StringField('Username(1~64 chars)', validators=[
         DataRequired(), Length(1, 64),
         Regexp('^[A-Za-z][A-Za-z0-9_.]*$', 0,
                'Usernames must have only letters, numbers, dots or '
                'underscores')])
     confirmed = BooleanField('Confirmed')
     role = SelectField('Role', coerce=int)
-    name = StringField('Name', validators=[Length(0, 64)])
-    about_me = TextAreaField('About me')
+    name = StringField('Name(0~64 chars)', validators=[Length(0, 64)])
+    about_me = TextAreaField('About me(0~1000 chars)', validators=[Length(0, 1000)])
     submit = SubmitField('Submit')
 
     def __init__(self, user, *args, **kwargs):
