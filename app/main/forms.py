@@ -13,7 +13,8 @@ class NameForm(FlaskForm):
 
 class EditProfileForm(FlaskForm):
     name = StringField('Name(0~64 chars)', validators=[Length(0, 64)])
-    about_me = TextAreaField('About me(0~1000 chars)', validators=[Length(0, 1000)])
+    about_me = TextAreaField('About me(0~1000 chars)',
+                             validators=[Length(0, 1000)])
     submit = SubmitField('Submit')
 
 
@@ -28,7 +29,8 @@ class EditProfileAdminForm(FlaskForm):
     confirmed = BooleanField('Confirmed')
     role = SelectField('Role', coerce=int)
     name = StringField('Name(0~64 chars)', validators=[Length(0, 64)])
-    about_me = TextAreaField('About me(0~1000 chars)', validators=[Length(0, 1000)])
+    about_me = TextAreaField('About me(0~1000 chars)',
+                             validators=[Length(0, 1000)])
     submit = SubmitField('Submit')
 
     def __init__(self, user, *args, **kwargs):
@@ -46,3 +48,9 @@ class EditProfileAdminForm(FlaskForm):
         if field.data != self.user.username and \
                 User.query.filter_by(username=field.data).first():
             raise ValidationError('Username already in use.')
+
+
+class PostForm(FlaskForm):
+    body = TextAreaField('Did something good happen?',
+                         validators=[DataRequired(), Length(min=1, max=140)])
+    submit = SubmitField('Submit')
