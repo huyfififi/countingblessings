@@ -6,25 +6,26 @@ from ..models import User
 
 
 class LoginForm(FlaskForm):
-    email = StringField('Email', validators=[DataRequired(), Length(1, 64),
-                                             Email()])
-    password = PasswordField('Password', validators=[DataRequired()])
-    remember_me = BooleanField('Keep me logged in')
-    submit = SubmitField('Log In')
+    email = StringField(label='Email', validators=[DataRequired(),
+                        Length(1, 64), Email()])
+    password = PasswordField(label='Password', validators=[DataRequired()])
+    remember_me = BooleanField(label='Keep me logged in')
+    submit = SubmitField(label='Log In')
 
 
 class RegistrationForm(FlaskForm):
-    email = StringField('Email', validators=[DataRequired(), Length(1, 64),
-                                             Email()])
-    username = StringField('Username', validators=[
+    email = StringField(label='Email', validators=[DataRequired(),
+                        Length(1, 64), Email()])
+    username = StringField(label='Username', validators=[
         DataRequired(), Length(1, 64),
         Regexp('^[A-Za-z][A-Za-z0-9_.]*$', 0,
                'Usernames must have only letters, numbers, dots or '
                'underscores')])
-    password = PasswordField('Password', validators=[
+    password = PasswordField(label='Password', validators=[
         DataRequired(), EqualTo('password2', message='Passwords must match.')])
-    password2 = PasswordField('Confirm password', validators=[DataRequired()])
-    submit = SubmitField('Register')
+    password2 = PasswordField(label='Confirm password',
+                              validators=[DataRequired()])
+    submit = SubmitField(label='Register')
 
     def validate_email(self, field):
         if User.query.filter_by(email=field.data.lower()).first():
@@ -36,32 +37,34 @@ class RegistrationForm(FlaskForm):
 
 
 class ChangePasswordForm(FlaskForm):
-    old_password = PasswordField('Old password', validators=[DataRequired()])
-    password = PasswordField('New password', validators=[
+    old_password = PasswordField(label='Old password',
+                                 validators=[DataRequired()])
+    password = PasswordField(label='New password', validators=[
         DataRequired(), EqualTo('password2', message='Passwords must match.')])
-    password2 = PasswordField('Confirm new password',
+    password2 = PasswordField(label='Confirm new password',
                               validators=[DataRequired()])
-    submit = SubmitField('Update Password')
+    submit = SubmitField(label='Update Password')
 
 
 class PasswordResetRequestForm(FlaskForm):
-    email = StringField('Email', validators=[DataRequired(), Length(1, 64),
-                                             Email()])
-    submit = SubmitField('Reset Password')
+    email = StringField(label='Email', validators=[DataRequired(),
+                        Length(1, 64), Email()])
+    submit = SubmitField(label='Reset Password')
 
 
 class PasswordResetForm(FlaskForm):
-    password = PasswordField('New Password', validators=[
+    password = PasswordField(label='New Password', validators=[
         DataRequired(), EqualTo('password2', message='Passwords must match')])
-    password2 = PasswordField('Confirm password', validators=[DataRequired()])
-    submit = SubmitField('Reset Password')
+    password2 = PasswordField(label='Confirm password',
+                              validators=[DataRequired()])
+    submit = SubmitField(label='Reset Password')
 
 
 class ChangeEmailForm(FlaskForm):
-    email = StringField('New Email', validators=[DataRequired(), Length(1, 64),
-                                                 Email()])
-    password = PasswordField('Password', validators=[DataRequired()])
-    submit = SubmitField('Update Email Address')
+    email = StringField(label='New Email', validators=[DataRequired(),
+                        Length(1, 64), Email()])
+    password = PasswordField(label='Password', validators=[DataRequired()])
+    submit = SubmitField(label='Update Email Address')
 
     def validate_email(self, field):
         if User.query.filter_by(email=field.data.lower()).first():

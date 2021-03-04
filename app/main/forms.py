@@ -7,31 +7,31 @@ from ..models import Role, User
 
 
 class NameForm(FlaskForm):
-    name = StringField('What is your name?', validators=[DataRequired()])
-    submit = SubmitField('Submit')
+    name = StringField(label='What is your name?', validators=[DataRequired()])
+    submit = SubmitField(label='Submit')
 
 
 class EditProfileForm(FlaskForm):
-    name = StringField('Name(0~64 chars)', validators=[Length(0, 64)])
-    about_me = TextAreaField('About me(0~1000 chars)',
+    name = StringField(label='Name(0~64 chars)', validators=[Length(0, 64)])
+    about_me = TextAreaField(label='About me(0~1000 chars)',
                              validators=[Length(0, 1000)])
-    submit = SubmitField('Submit')
+    submit = SubmitField(label='Submit')
 
 
 class EditProfileAdminForm(FlaskForm):
-    email = StringField('Email', validators=[DataRequired(), Length(1, 64),
-                                             Email()])
-    username = StringField('Username(1~64 chars)', validators=[
+    email = StringField(label='Email', validators=[DataRequired(),
+                        Length(1, 64), Email()])
+    username = StringField(label='Username(1~64 chars)', validators=[
         DataRequired(), Length(1, 64),
         Regexp('^[A-Za-z][A-Za-z0-9_.]*$', 0,
                'Usernames must have only letters, numbers, dots or '
                'underscores')])
-    confirmed = BooleanField('Confirmed')
-    role = SelectField('Role', coerce=int)
-    name = StringField('Name(0~64 chars)', validators=[Length(0, 64)])
-    about_me = TextAreaField('About me(0~1000 chars)',
+    confirmed = BooleanField(label='Confirmed')
+    role = SelectField(label='Role', coerce=int)
+    name = StringField(label='Name(0~64 chars)', validators=[Length(0, 64)])
+    about_me = TextAreaField(label='About me(0~1000 chars)',
                              validators=[Length(0, 1000)])
-    submit = SubmitField('Submit')
+    submit = SubmitField(label='Submit')
 
     def __init__(self, user, *args, **kwargs):
         super(EditProfileAdminForm, self).__init__(*args, **kwargs)
@@ -51,6 +51,6 @@ class EditProfileAdminForm(FlaskForm):
 
 
 class PostForm(FlaskForm):
-    body = TextAreaField('Did something good happen?',
+    body = TextAreaField(label='Did something good happen?',
                          validators=[DataRequired(), Length(min=1, max=140)])
-    submit = SubmitField('Submit')
+    submit = SubmitField(label='Submit')
