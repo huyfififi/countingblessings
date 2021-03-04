@@ -59,3 +59,13 @@ div.pagination {
 .table.followers tr {
     border-bottom: 1px solid #e0e0e0;
 }
+.navbar {
+    background-color: #d6e9ca;
+    border-color: #fdeff2;
+}
+.nav.navbar-nav li a {
+    color: #6e4a55;
+}
+.navbar-header .navbar-brand {
+    color: #6e4a55;
+}
