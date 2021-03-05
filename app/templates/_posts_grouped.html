@@ -1,0 +1,19 @@
+<ul class="posts">
+    {% set prev = [-1] %}
+    {% for post in posts %}
+    {% if post.update_daysago() %}{% endif %}
+    {% if post.daysago != prev.pop() %}
+    <div class="post-grouped-date">
+        {{ moment(post.timestamp).format('YYYY-MM-DD') }}
+    </div>
+    {% endif %}
+    {% if prev.append(post.daysago) %}{% endif %}
+    <li class="post-grouped">
+        <div class="post-grouped-content">
+            <div class="post-body">
+                &#x2705; {{ post.body }}
+            </div>
+        </div>
+    </li>
+    {% endfor %}
+</ul>

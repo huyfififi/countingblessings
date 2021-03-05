@@ -44,8 +44,9 @@
     </div>
 </div>
 
-<h3>Posts by {{ user.username}}</h3>
-{% include '_posts.html' %}
+{% include '_contribution_graph.html' %}
+
+{% include '_posts_grouped.html' %}
 {% if pagination %}
 <div class="pagination">
     {{ macros.pagination_widget(pagination, '.user', username=user.username) }}

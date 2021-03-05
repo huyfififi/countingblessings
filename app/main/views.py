@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from flask import render_template, redirect, url_for, abort, flash, request,\
     current_app, make_response
 from flask_login import login_required, current_user
@@ -42,7 +44,8 @@ def user(username):
         error_out=False)
     posts = pagination.items
     return render_template('user.html', user=user, posts=posts,
-                           pagination=pagination)
+                           pagination=pagination,
+                           current_time=datetime.utcnow())
 
 
 @main.route('/edit-profile', methods=['GET', 'POST'])

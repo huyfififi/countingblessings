@@ -47,14 +47,22 @@ div.pagination {
     padding: 0px;
     margin: 0px;
 }
-.post-body h1 {
-    font-size: 140%;
+div.post-grouped-date {
+    border-top: 1px solid #e0e0e0;
+    font-size: 150%;
 }
-.post-body h2 {
-    font-size: 130%;
+div.post-grouped-content {
+    min-height: 32px;
 }
-.post-body h3 {
-    font-size: 120%;
+td { border: 1px solid red; width: 1.851%; height: 1.851%; }
+div.blue {
+    background-color: blue;
+}
+div.red {
+    background-color: red;
+}
+div.week {
+    font-size: 1vw;
 }
 .table.followers tr {
     border-bottom: 1px solid #e0e0e0;
