@@ -54,12 +54,25 @@ div.post-grouped-date {
 div.post-grouped-content {
     min-height: 32px;
 }
-td { border: 1px solid red; width: 1.851%; height: 1.851%; }
+table {
+    width: 90%;
+}
+/* td { border: 1px solid black; width: 1.851%; height: 1.851%; } */
+td {
+    border: 0.2vw solid white;
+    width: 1.851%;
+    padding-bottom: 1.851%;
+    /* box-shadow: inset 0 0 0.1vw 0.1vw #fff; */
+    background-color: #bada55;
+}
 div.blue {
     background-color: blue;
 }
 div.red {
     background-color: red;
+}
+div.green {
+    background-color: green;
 }
 div.week {
     font-size: 1vw;

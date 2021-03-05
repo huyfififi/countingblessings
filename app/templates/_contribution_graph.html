@@ -8,50 +8,14 @@
     {% for i in range(7) %}
         <tr>
         {% if i <= weekday %}
-            {% for j in range(54) %}
-                {% if j == 0 %}
-                    {% if i == 0 %}
-                        <td><div></div></td>
-                    {% elif i == 1 %}
-                        <td><div class="week">M</div></td>
-                    {% elif i == 2 %}
-                        <td><div></div></td>
-                    {% elif i == 3 %}
-                        <td><div></div></td>
-                    {% elif i == 4 %}
-                        <td><div></div></td>
-                    {% elif i == 5 %}
-                        <td><div class="week">F</div></td>
-                    {% else %}
-                        <td><div></div></td>
-                    {% endif %}
-                {% else %}
-                    <td><div class="blue">&nbsp;</div></td>
-                {% endif %}
+            {% for j in range(53) %}
+                <td></td>
             {% endfor %}
         {% else %}
-            {% for j in range(53) %}
-                {% if j == 0 %}
-                    {% if i == 0 %}
-                        <td><div></div></td>
-                    {% elif i == 1 %}
-                        <td><div class="week">M</div></td>
-                    {% elif i == 2 %}
-                        <td><div></div></td>
-                    {% elif i == 3 %}
-                        <td><div></div></td>
-                    {% elif i == 4 %}
-                        <td><div></div></td>
-                    {% elif i == 5 %}
-                        <td><div class="week">F</div></td>
-                    {% else %}
-                        <td><div></div></td>
-                    {% endif %}
-                {% else %}
-                    <td><div class="blue">&nbsp;</div></td>
-                {% endif %}
+            {% for j in range(52) %}
+                <td></td>
             {% endfor %}
-            <td><div class="red">&nbsp;</div></td>
+            <td></td>
         {% endif %}
         </tr>
     {% endfor %}
