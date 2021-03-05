@@ -1,5 +1,5 @@
 {% set weekday = current_time.weekday() %}
-<ul class="contribution-graph">
+<div class="contribution-graph">
     {% for post in posts %}
         {% if post.update_daysago() %}{% endif %}
     {% endfor %}
@@ -20,4 +20,4 @@
         </tr>
     {% endfor %}
     </table>
-</ul>
+</div>
