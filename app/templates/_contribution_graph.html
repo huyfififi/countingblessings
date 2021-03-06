@@ -11,13 +11,13 @@
             <tr>
             {% if i <= weekday %}
                 {% for j in range(53) %}
-                    <td class="one"></div></td>
+                    <td class="one"></td>
                 {% endfor %}
             {% else %}
                 {% for j in range(52) %}
-                    <td class="one"></div></td>
+                    <td class="one"></td>
                 {% endfor %}
-                <td class="one"></div></td>
+                <td class="one"></td>
             {% endif %}
             </tr>
         {% endfor %}
@@ -26,27 +26,27 @@
     </center>
 
     <div class="contribution-graph-footer">
-        Less
+        <span>Less</span>
         <table>
             <tr>
                 {% for i in range(6) %}
                     {% if i == 0 %}
-                        <td class="zero"></div></td>
+                        <td class="zero"></td>
                     {% elif i == 1 %}
-                        <td class="one"></div></td>
+                        <td class="one"></td>
                     {% elif i == 2 %}
                         <td class="two"></div></td>
                     {% elif i == 3 %}
-                        <td class="three"></div></td>
+                        <td class="three"></td>
                     {% elif i == 4 %}
-                        <td class="four"></div></td>
+                        <td class="four"></td>
                     {% elif i == 5 %}
-                        <td class="five"></div></td>
+                        <td class="five"></td>
                     {% endif %}
                 {% endfor %}
             </tr>
         </table>
-        More
+        <span>More</span>
     </div>
 
 </div>
