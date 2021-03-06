@@ -62,7 +62,7 @@ div.contribution-graph-content table {
     background-color: #f3f3f2;
 }
 div.contribution-graph-footer table {
-    width: 9.3%;
+    width: 9.2%;
     background-color: #f3f3f2;
     display: inline-block;
 }
@@ -76,7 +76,7 @@ div.contribution-graph-content td {
 div.contribution-graph-footer td {
     border: 0.2vw solid #f3f3f2;
     width: 1.851%;
-    padding-bottom: 15%;
+    padding-bottom: 14%;
     white-space: nowrap;
 }
 td.zero {
