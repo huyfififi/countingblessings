@@ -58,7 +58,7 @@ div.contribution-graph {
     /* background-color: #f3f3f2; */
 }
 div.contribution-graph-header {
-    font-size: 0.8vw;
+    font-size: 90%;
     margin-left: 10.5%;
 }
 div.contribution-graph-footer {
@@ -74,7 +74,7 @@ div.contribution-graph-footer table {
 }
 div.contribution-graph-footer span {
     vertical-align: 20%;
-    font-size: 0.8vw;
+    font-size: 90%;
 }
 div.contribution-graph-content td {
     border: 0.2vw solid #f3f3f2;
