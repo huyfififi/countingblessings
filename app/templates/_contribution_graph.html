@@ -1,14 +1,12 @@
 {% set weekday = current_time.weekday() %}
-{% set counter = [0] %}
 {% for post in posts %}
     {% if post.update_daysago() %}{% endif %}
-    {% if counter.append(counter.pop()+1) %}{% endif %}
 {% endfor %}
 <div class="contribution-graph">
 
 
     <div class="contribution-graph-header">
-        {{ counter.pop() }} posts in the last year
+        {{ posts | length }} posts in the last year
     </div>
 
     <center>
@@ -19,13 +17,38 @@
             <tr>
             {% if i <= weekday %}
                 {% for j in range(53) %}
-                    <td class="one"></td>
+                    
+                    {% set week = (52-j) %}
+                    {% set daysago = (week * 7 + (weekday - i)) %}
+                    {% set counter = [0] %}
+                    {% for post in posts %}
+                        {% if post.daysago == daysago %}
+                            {% if counter.append(counter.pop()+1) %}{% endif %}
+                        {% endif %}
+                    {% endfor %}
+
+                    {% set counter = counter.pop() %}
+
+                    {% if counter == 0 %}
+                        <td class="zero"></td>
+                    {% elif counter == 1 %}
+                        <td class="one"></td>
+                    {% elif counter == 2 %}
+                        <td class="two"></td>
+                    {% elif counter == 3 %}
+                        <td class="three"></td>
+                    {% elif counter == 4 %}
+                        <td class="four"></td>
+                    {% else %}
+                        <td class="five"></td>
+                    {% endif %}
+
                 {% endfor %}
             {% else %}
                 {% for j in range(52) %}
-                    <td class="one"></td>
+                    <td class="zero"></td>
                 {% endfor %}
-                <td class="one"></td>
+                <td class="zero"></td>
             {% endif %}
             </tr>
         {% endfor %}
