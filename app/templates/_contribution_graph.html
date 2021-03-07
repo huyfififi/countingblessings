@@ -1,11 +1,29 @@
 {% set weekday = current_time.weekday() %}
+{% set counter = [0] %}
+{% for post in posts %}
+    {% if post.update_daysago() %}{% endif %}
+    {% if counter.append(counter.pop()+1) %}{% endif %}
+{% endfor %}
 <div class="contribution-graph">
+
+
+    <div class="contribution-graph-header">
+        {{ counter.pop() }} posts in the last year
+    </div>
+
+
+    <div class="contribution-graph-thumbnail">
+        <div class="contribution-graph-thumbnail-week">Sun</div>
+        <div class="contribution-graph-thumbnail-week">Mon</div>
+        <div class="contribution-graph-thumbnail-week">Tue</div>
+        <div class="contribution-graph-thumbnail-week">Web</div>
+        <div class="contribution-graph-thumbnail-week">Thu</div>
+        <div class="contribution-graph-thumbnail-week">Fri</div>
+    </div>
+
+    <center>
     
     <div class="contribution-graph-content">
-        {% for post in posts %}
-            {% if post.update_daysago() %}{% endif %}
-        {% endfor %}
-        <center>
         <table>
         {% for i in range(7) %}
             <tr>
@@ -22,8 +40,8 @@
             </tr>
         {% endfor %}
         </table>
-        </center>
     </div>
+
     </center>
 
     <div class="contribution-graph-footer">

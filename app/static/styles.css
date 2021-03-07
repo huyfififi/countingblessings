@@ -55,7 +55,21 @@ div.post-grouped-content {
     min-height: 32px;
 }
 div.contribution-graph {
-    background-color: #f3f3f2;
+    /* background-color: #f3f3f2; */
+}
+div.contribution-graph-header {
+    font-size: 0.8vw;
+    margin-left: 11%;
+}
+div.contribution-graph-thumbnail {
+    width: 4vw;
+    position: absolute;
+}
+div.contribution-graph-thumbnail-week {
+    font-size: 0.8vw;
+}
+div.contribution-graph-footer {
+    margin-left: 11%
 }
 div.contribution-graph-content table {
     width: 80%;
@@ -63,20 +77,16 @@ div.contribution-graph-content table {
 }
 div.contribution-graph-footer table {
     width: 9.2%;
-    background-color: #f3f3f2;
     display: inline-block;
 }
 div.contribution-graph-footer span {
-    /* vertical-align: top; */
     vertical-align: 20%;
     font-size: 0.8vw;
 }
-/* td { border: 1px solid black; width: 1.851%; height: 1.851%; } */
 div.contribution-graph-content td {
     border: 0.2vw solid #f3f3f2;
     width: 1.851%;
     padding-bottom: 1.65%;
-    /*background-color: #d6e9ca;*/
 }
 div.contribution-graph-footer td {
     border: 0.2vw solid #f3f3f2;
