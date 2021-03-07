@@ -66,6 +66,11 @@ div.contribution-graph-footer table {
     background-color: #f3f3f2;
     display: inline-block;
 }
+div.contribution-graph-footer span {
+    /* vertical-align: top; */
+    vertical-align: 20%;
+    font-size: 0.8vw;
+}
 /* td { border: 1px solid black; width: 1.851%; height: 1.851%; } */
 div.contribution-graph-content td {
     border: 0.2vw solid #f3f3f2;
