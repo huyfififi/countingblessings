@@ -15,11 +15,12 @@
         <table>
         {% for i in range(7) %}
             <tr>
-            {% if i <= weekday %}
-                {% for j in range(53) %}
+            {% for j in range(53) %}
                     
-                    {% set week = (52-j) %}
-                    {% set daysago = (week * 7 + (weekday - i)) %}
+                {% set week = (52-j) %}
+                {% set daysago = (week * 7 + (weekday - i)) %}
+
+                {% if daysago >= 0 %}
                     {% set counter = [0] %}
                     {% for post in posts %}
                         {% if post.daysago == daysago %}
@@ -43,13 +44,11 @@
                         <td class="five"></td>
                     {% endif %}
 
-                {% endfor %}
-            {% else %}
-                {% for j in range(52) %}
+                {% else %}
                     <td class="zero"></td>
-                {% endfor %}
-                <td class="zero"></td>
-            {% endif %}
+
+                {% endif %}
+            {% endfor %}
             </tr>
         {% endfor %}
         </table>
