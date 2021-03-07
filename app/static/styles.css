@@ -59,17 +59,10 @@ div.contribution-graph {
 }
 div.contribution-graph-header {
     font-size: 0.8vw;
-    margin-left: 11%;
-}
-div.contribution-graph-thumbnail {
-    width: 4vw;
-    position: absolute;
-}
-div.contribution-graph-thumbnail-week {
-    font-size: 0.8vw;
+    margin-left: 10.5%;
 }
 div.contribution-graph-footer {
-    margin-left: 11%
+    margin-left: 10.5%;
 }
 div.contribution-graph-content table {
     width: 80%;
