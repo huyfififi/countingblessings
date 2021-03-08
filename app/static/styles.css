@@ -69,8 +69,12 @@ div.contribution-graph-content table {
     background-color: #f3f3f2;
     border: 0.2vw solid #f3f3f2;
 }
-div.contribution-graph-footer table {
-    width: 9.2%;
+div.contribution-graph-footer table.week {
+    width: 10.5%;
+    display: inline-block;
+}
+div.contribution-graph-footer table.border {
+    width: 2%;
     display: inline-block;
 }
 div.contribution-graph-footer span {
@@ -81,11 +85,17 @@ div.contribution-graph-content td {
     width: 1.851%;
     padding-bottom: 1.65%;
 }
-div.contribution-graph-footer td {
+div.contribution-graph-footer table.week td {
     border: 0.2vw solid #f3f3f2;
     width: 1.851%;
     padding-bottom: 14%;
     white-space: nowrap;
+}
+div.contribution-graph-footer table.border td {
+    border: 0.2vw solid #e83929;
+    width: 1.851%;
+    padding-bottom: 83%;
+    background-color: #f3f3f2;
 }
 td.zero-not-today {
     border: 0.2vw solid #f3f3f2;
@@ -220,28 +230,32 @@ td.five-yesterday {
     background-color: #69b076;
 }
 td.zero-today {
-    border: 0.2vw solid red;
+    border: 0.2vw solid #e83929;
     background-color: #ffffff;
 }
 td.one-today {
-    border: 0.2vw solid red;
+    border: 0.2vw solid #e83929;
     background-color: #d6e9ca;
 }
 td.two-today {
-    border: 0.2vw solid red;
+    border: 0.2vw solid #e83929;
     background-color: #badcad;
 }
 td.three-today {
-    border: 0.2vw solid red;
+    border: 0.2vw solid #e83929;
     background-color: #98d98e;
 }
 td.four-today {
-    border: 0.2vw solid red;
+    border: 0.2vw solid #e83929;
     background-color: #88cb7f;
 }
 td.five-today {
-    border: 0.2vw solid red;
+    border: 0.2vw solid #e83929;
     background-color: #69b076;
+}
+td.future {
+    border: 0.2vw solid #f3f3f2;
+    background-color: #f3f3f2;
 }
 .table.followers tr {
     border-bottom: 1px solid #e0e0e0;

@@ -105,7 +105,7 @@
                     {% endif %}
 
                 {% else %}
-                    <td class="zero-not-today"></td>
+                    <td class="future"></td>
 
                 {% endif %}
             {% endfor %}
@@ -118,7 +118,7 @@
 
     <div class="contribution-graph-footer">
         <span>Less</span>
-        <table>
+        <table class="week">
             <tr>
                 {% for i in range(6) %}
                     {% if i == 0 %}
@@ -138,6 +138,16 @@
             </tr>
         </table>
         <span>More</span>
+
+        &nbsp;&nbsp;
+
+        <table class="border">
+            <tr>
+                <td></td>
+            </tr>
+        </table>
+        <span>-&gt;today</span>
+
     </div>
 
 </div>
