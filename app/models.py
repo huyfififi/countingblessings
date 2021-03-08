@@ -265,5 +265,5 @@ class Post(db.Model):
 
     def update_daysago(self):
         today = datetime.utcnow()
-        self.daysago = (today-self.timestamp).days
+        self.daysago = (today.date() - self.timestamp.date()).days
         db.session.add(self)
