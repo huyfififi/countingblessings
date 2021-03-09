@@ -54,9 +54,6 @@ div.post-grouped-date {
 div.post-grouped-content {
     min-height: 32px;
 }
-div.contribution-graph {
-    /* background-color: #f3f3f2; */
-}
 div.contribution-graph-header {
     font-size: 90%;
     margin-left: 10.5%;
@@ -64,8 +61,16 @@ div.contribution-graph-header {
 div.contribution-graph-footer {
     margin-left: 10.5%;
 }
+div.contribution-graph-side {
+    width: 10%;
+    font-size: 90%;
+    position: absolute;
+}
+div.contribution-graph-content {
+    margin-left: 10%
+}
 div.contribution-graph-content table {
-    width: 80%;
+    width: 90%;
     background-color: #f3f3f2;
     border: 0.2vw solid #f3f3f2;
 }

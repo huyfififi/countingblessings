@@ -6,11 +6,13 @@
 
 
     <div class="contribution-graph-header">
-        {{ posts | length }} posts in the last year
+        {{ posts | length }} posts in the last year (old &larr;&rarr; new)
     </div>
 
-    <center>
-    
+    <div class="contribution-graph-side">
+        Sun<br>&#8942;<br>Sat
+    </div>
+
     <div class="contribution-graph-content">
         <table>
         {% for i in range(7) %}
@@ -113,8 +115,6 @@
         {% endfor %}
         </table>
     </div>
-
-    </center>
 
     <div class="contribution-graph-footer">
         <span>Less</span>
