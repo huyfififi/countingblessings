@@ -7,10 +7,10 @@
 <div class="page-header">
     <img class="img-rounded profile-thumbnail" src="{{ user.gravatar(size=256) }}">
     <div class="profile-header">
-        <h1>{{ user.username }}</h1>
+        @{{ user.username }}
         {% if user.name %}
         <p>
-            {% if user.name %}{{ user.name }}<br>{% endif %}
+            <h1>{% if user.name %}{{ user.name }}</h1><br>{% endif %}
         </p>
         {% endif %}
         {% if current_user.is_administrator() %}
