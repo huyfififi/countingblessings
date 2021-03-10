@@ -48,6 +48,16 @@ def user(username):
                            current_time=datetime.utcnow())
 
 
+@main.route('/about')
+def about():
+    return render_template('about.html')
+
+
+@main.route('/contact')
+def contact():
+    return render_template('contact.html')
+
+
 @main.route('/edit-profile', methods=['GET', 'POST'])
 @login_required
 def edit_profile():

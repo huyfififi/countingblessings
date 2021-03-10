@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}CountingBlessings - About{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>About This Website</h1>
+</div>
+    <p>Some research indicates that it is beneficial for our mental health to record good things in daily life. You may use this website as a good-things-tracker, besides you may connect neighbors to follow what good things happened to their life.</p>
+    <p>There is no need to strain yourself to record good things as many as possible. Let's start with one, and five is considered enough.</p>
+    <ul>
+        <li>Ate tasty food at Starbucks</li>
+        <li>Talked with my friend</li>
+        <li>Played funny video games</li>
+        <li>The waiter at a restaurant I had lunck at smiled at me</li>
+        <li>Had time with family</li>
+        <li>Managed to apply for a new position</li>
+        <li>Woke up early</li>
+        <li>The atmosphere in the early morning was comfortable</li>
+    </ul>
+    {% if not current_user.is_authenticated %}
+        <p>Sounds great? <a href="{{ url_for('auth.register')}}">Register here</a></p>
+    {% endif %}
+    <p></p>
+<div>
+    cf. Emmons, R. A., & McCullough, M. E. (2003). Counting blessings versus burdens: An experimental investigation of gratitude and subjective well-being in daily life. Journal of Personality and Social Psychology, 84(2), 377–389.
+</div>
+<div>
+    Caution: This is an experimental website. We are not responsible for any trouble that may occur on this website.
+</div>
+{% endblock %}
