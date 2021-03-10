@@ -2,8 +2,12 @@
     position: absolute;
 }
 .profile-header {
-    min-height: 260px;
-    margin-left: 280px;
+    min-height: 14vw;
+    margin-left: 15vw;
+}
+.img-rounded.profile-thumbnail {
+    max-width: 14vw;
+    height: auto;
 }
 div.post-tabs {
     margin-top: 16px;
@@ -12,7 +16,7 @@ ul.posts {
     list-style-type: none;
     padding: 0px;
     margin: 16px 0px 0px 0px;
-    border-top: 1px solid #e0e0e0;
+    border-top: 2px solid #e0e0e0;
 }
 div.post-tabs ul.posts {
     margin: 0px;
