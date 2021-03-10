@@ -101,7 +101,7 @@ div.contribution-graph-footer table.week td {
     white-space: nowrap;
 }
 div.contribution-graph-footer table.border td {
-    border: 0.2vw solid #e83929;
+    border: 0.2vw double #e83929;
     width: 1.851%;
     padding-bottom: 83%;
     background-color: #f3f3f2;
@@ -130,136 +130,28 @@ td.five-not-today {
     border: 0.2vw solid #f3f3f2;
     background-color: #69b076;
 }
-td.zero-eightdaysago {
-    border-top: 0.2vw solid #f3f3f2;
-    border-left: 0.2vw solid #f3f3f2;
-    border-right: 0.2vw solid #f3f3f2;
-    background-color: #ffffff;
-}
-td.one-eightdaysago {
-    border-top: 0.2vw solid #f3f3f2;
-    border-left: 0.2vw solid #f3f3f2;
-    border-right: 0.2vw solid #f3f3f2;
-    background-color: #d6e9ca;
-}
-td.two-eightdaysago {
-    border-top: 0.2vw solid #f3f3f2;
-    border-left: 0.2vw solid #f3f3f2;
-    border-right: 0.2vw solid #f3f3f2;
-    background-color: #badcad;
-}
-td.three-eightdaysago {
-    border-top: 0.2vw solid #f3f3f2;
-    border-left: 0.2vw solid #f3f3f2;
-    border-right: 0.2vw solid #f3f3f2;
-    background-color: #98d98e;
-}
-td.four-eightdaysago {
-    border-top: 0.2vw solid #f3f3f2;
-    border-left: 0.2vw solid #f3f3f2;
-    border-right: 0.2vw solid #f3f3f2;
-    background-color: #88cb7f;
-}
-td.five-eightdaysago {
-    border-top: 0.2vw solid #f3f3f2;
-    border-left: 0.2vw solid #f3f3f2;
-    border-right: 0.2vw solid #f3f3f2;
-    background-color: #69b076;
-}
-td.zero-aweekago {
-    border-top: 0.2vw solid #f3f3f2;
-    border-bottom: 0.2vw solid #f3f3f2;
-    border-left: 0.2vw solid #f3f3f2;
-    background-color: #ffffff;
-}
-td.one-aweekago {
-    border-top: 0.2vw solid #f3f3f2;
-    border-bottom: 0.2vw solid #f3f3f2;
-    border-left: 0.2vw solid #f3f3f2;
-    background-color: #d6e9ca;
-}
-td.two-aweekago {
-    border-top: 0.2vw solid #f3f3f2;
-    border-bottom: 0.2vw solid #f3f3f2;
-    border-left: 0.2vw solid #f3f3f2;
-    background-color: #badcad;
-}
-td.three-aweekago {
-    border-top: 0.2vw solid #f3f3f2;
-    border-bottom: 0.2vw solid #f3f3f2;
-    border-left: 0.2vw solid #f3f3f2;
-    background-color: #98d98e;
-}
-td.four-aweekago {
-    border-top: 0.2vw solid #f3f3f2;
-    border-bottom: 0.2vw solid #f3f3f2;
-    border-left: 0.2vw solid #f3f3f2;
-    background-color: #88cb7f;
-}
-td.five-aweekago {
-    border-top: 0.2vw solid #f3f3f2;
-    border-bottom: 0.2vw solid #f3f3f2;
-    border-left: 0.2vw solid #f3f3f2;
-    background-color: #69b076;
-}
-td.zero-yesterday {
-    border-top: 0.2vw solid #f3f3f2;
-    border-right: 0.2vw solid #f3f3f2;
-    border-left: 0.2vw solid #f3f3f2;
-    background-color: #ffffff;
-}
-td.one-yesterday {
-    border-top: 0.2vw solid #f3f3f2;
-    border-right: 0.2vw solid #f3f3f2;
-    border-left: 0.2vw solid #f3f3f2;
-    background-color: #d6e9ca;
-}
-td.two-yesterday {
-    border-top: 0.2vw solid #f3f3f2;
-    border-right: 0.2vw solid #f3f3f2;
-    border-left: 0.2vw solid #f3f3f2;
-    background-color: #badcad;
-}
-td.three-yesterday {
-    border-top: 0.2vw solid #f3f3f2;
-    border-right: 0.2vw solid #f3f3f2;
-    border-left: 0.2vw solid #f3f3f2;
-    background-color: #98d98e;
-}
-td.four-yesterday {
-    border-top: 0.2vw solid #f3f3f2;
-    border-right: 0.2vw solid #f3f3f2;
-    border-left: 0.2vw solid #f3f3f2;
-    background-color: #88cb7f;
-}
-td.five-yesterday {
-    border-top: 0.2vw solid #f3f3f2;
-    border-right: 0.2vw solid #f3f3f2;
-    border-left: 0.2vw solid #f3f3f2;
-    background-color: #69b076;
-}
 td.zero-today {
-    border: 0.2vw solid #e83929;
+    border: 0.2vw double #e83929;
     background-color: #ffffff;
 }
 td.one-today {
-    border: 0.2vw solid #e83929;
+    border: 0.2vw double #e83929;
     background-color: #d6e9ca;
 }
 td.two-today {
-    border: 0.2vw solid #e83929;
+    border: 0.2vw double #e83929;
     background-color: #badcad;
 }
 td.three-today {
-    border: 0.2vw solid #e83929;
+    border: 0.2vw double #e83929;
     background-color: #98d98e;
 }
 td.four-today {
-    border: 0.2vw solid #e83929;
+    border: 0.2vw double #e83929;
     background-color: #88cb7f;
 }
 td.five-today {
-    border: 0.2vw solid #e83929;
+    border: 0.2vw double #e83929;
     background-color: #69b076;
 }
 td.future {
