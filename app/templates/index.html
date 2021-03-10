@@ -5,6 +5,10 @@
 {% block title %}CountingBlessings{% endblock %}
 
 {% block page_content %}
+
+<meta name="description" content="Blessings recorder" />
+<meta name="keywords" content="mental health, blessings, micro blogs" />
+
 <div class="page-header">
     <h1>Hello, {% if current_user.is_authenticated %}{{ current_user.username }}{% else %}Stranger{% endif %}!</h1>
 
