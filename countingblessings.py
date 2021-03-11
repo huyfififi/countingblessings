@@ -48,7 +48,7 @@ def test(coverage):
         COV.erase()
 
 
-@app.cli.command
+@app.cli.command()
 def deploy():
     """Run deployment tasks."""
     # migrate database to latest revision

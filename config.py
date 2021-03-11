@@ -56,9 +56,9 @@ class ProductionConfig(Config):
                 secure = ()
         mail_handler = SMTPHandler(
             mailhost=(cls.MAIL_SERVER, cls.MAIL_PORT),
-            fromadder=cls.FLASKY_MAIL_SENDER,
-            toaddr=[cls.FLASKY_ADMIN],
-            subject=cls.FLASKY_MAIL_SUBJECT_PREFIX + 'Application Error',
+            fromaddr=cls.CB_MAIL_SENDER,
+            toaddrs=[cls.CB_ADMIN],
+            subject=cls.CB_MAIL_SUBJECT_PREFIX + 'Application Error',
             credentials=credentials,
             secure=secure)
         mail_handler.setLevel(logging.ERROR)
@@ -79,7 +79,7 @@ class HerokuConfig(ProductionConfig):
         # log to stderr
         import logging
         from logging import StreamHandler
-        file_handler = StreamHandler
+        file_handler = StreamHandler()
         file_handler.setLevel(logging.INFO)
         app.logger.addHandler(file_handler)
 
@@ -88,5 +88,6 @@ config = {
     'development': DevelopmentConfig,
     'testing': TestingConfig,
     'production': ProductionConfig,
+    'heroku': HerokuConfig,
     'default': DevelopmentConfig
 }
