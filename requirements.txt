@@ -27,6 +27,7 @@ matplotlib==3.2.1
 mccabe==0.6.1
 numpy==1.18.3
 pandas==1.0.3
+psycopg2-binary==2.8.6
 pycodestyle==2.6.0
 pyflakes==2.2.0
 pyparsing==2.4.7
